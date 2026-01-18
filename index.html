@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buggy Example</title>
+<style>
+body {
+background-color: lightblue; /* there was no - between background color */
+}
+
+#box {
+width: 100px;
+height: 100px;
+background: red;
+position:absolute; /* added the position because we can't use left with the default position 'static'*/
+}
+</style>
+</head>
+<body>
+
+<h1>Bug Practice</h1>
+
+<input id="nameInput" type="text">
+<button onclick="start()">Start</button>
+
+<div id="box"></div>
+
+<script>
+counter = 0;
+
+function start() {
+let input = document.getElementById("nameInput"); // incorrect id only name
+console.log(input.value);
+
+interval = setInterval(function () {
+counter++;
+
+document.body.style.backgroundColor = "yellow";  // was written documentstyel, added .body
+
+let box = document.getElementById("box"); //incorrect id box with 2 x 
+box.style.left = counter + "px";
+
+if (counter == 10){
+   clearInterval(interval)  // stop it when counter equal 10
+}
+}); 
+}
+</script>
+
+</body>
+</html>

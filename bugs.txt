@@ -1,0 +1,9 @@
+bugs in CSS:
+  1. Line 7: There was no dash between background and color 
+  2. Line 14: added the position because in line 40 .left is used and we can't use it with the default position so we have to change it
+
+bugs in JavaScript:
+  1. Line 31: The id usedd was incorrect it was written as "name" and not "nameInput"
+  2. Line 37: The word style was misspelt as styel with no dot before it and it was not specified for the body
+  3. Line 39: The id used was incorrect it was written as "boxx" with 2 x instead of just one 
+  4. Line 42: Added the if condition so it stops when counter reaches 10 (i didn't know what the purpose of counter==10 is, i figured it was to stop it)
